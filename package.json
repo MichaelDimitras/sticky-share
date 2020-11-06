@@ -1,0 +1,11 @@
+{
+  "name": "sticky-share",
+  "version": "1.0.0",
+  "description": "A collaborative sticky notes app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Dimitras",
+  "license": "MIT"
+}
