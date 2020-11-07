@@ -9,12 +9,17 @@
     <meta name="description" content="A cool thing made with Glitch">
     
     <title>Sticky Share</title>
-    <link rel="stylesheet" href="../public/style.css">
-
-    <script src="../public/notes.js" defer></script>
+    <link rel="stylesheet" href="/static/style.css">
   </head>
   <body>
     <div id='spawner'>&plus;</div>
     <div id='spawn-area'></div>
+
+    <script src="../node_modules/socket.io-client/dist/socket.io.js"></script>
+    <script>
+        const socket = io();
+        socket.open();
+    </script>
+    <script type="text/javascript" src="static/notes.js" defer></script>
   </body>
 </html>
