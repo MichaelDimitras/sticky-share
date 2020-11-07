@@ -12,7 +12,10 @@ const dragElement = (elmnt) => {
     let offsetX = 0;
     let offsetY = 0;
 
+
     const dragMouseDown = (e) => {
+        console.log(elmnt, elmnt.offsetTop)
+        console.log(elmnt.style.left, elmnt.offsetLeft)
         e = e || window.event;
         e.preventDefault();
         // get the mouse cursor position at startup:
@@ -33,6 +36,7 @@ const dragElement = (elmnt) => {
         startX = e.clientX;
         startY = e.clientY;
         
+        // the offsets are both off my 20px always
         elmnt.style.top = (elmnt.offsetTop - offsetY) + "px";
         elmnt.style.left = (elmnt.offsetLeft - offsetX) + "px";
     }
@@ -49,6 +53,7 @@ const dragElement = (elmnt) => {
 
 const spawn = (color = 'pink') => {
     const note = document.createElement('div');
+    console.log('ss', color, typeof color)
     note.classList.add('box', 'note', color);
     note.innerHTML = noteTemplate;
     attachHandlers(note);
